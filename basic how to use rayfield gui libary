@@ -1,0 +1,57 @@
+https://docs.sirius.menu/rayfield    - rayfield documentation
+
+https://www.youtube.com/watch?v=LlyyrgmY7dM            -advanced how to use 40 mins
+https://www.youtube.com/watch?v=ToyPnBDNapg            -good explanation 24 minutes
+reference sheet
+
+after every button and code add 2 blank lines exept for create tab create section
+after every function() 
+add 2 lines/press enter twice then paste your code
+
+
+
+
+window
+
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",     - Main name of the exploit
+   LoadingTitle = "Rayfield Interface Suite",      loading name of the exploit
+   LoadingSubtitle = "by Sirius",    loading subtitle of the exploit
+   ConfigurationSaving = {
+      Enabled = true,         true to save false to not save
+      FolderName = nil, -- Create a custom folder for your hub/game               change nil to a custom file name i reccomend your exploit name
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,       make true make them join the discord
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD         change novinvite link to the end of your discord invite
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system            https://www.youtube.com/watch?v=50eWjNz6sHY for how to use
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+
+tab and section
+local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image               replace 4483362458 to nil and at (createTab)  behind tab add a simple name for the tab change tab example to the name you want for your tab
+local Section = Tab:CreateSection("Section Example")   then add a section right underneath make sure to copy and paste the name before tab to = Tab then change section example to a name for it i reccomend something like other main games and stuff
+
+button
+local Button = Tab:CreateButton({    copy and paste the name before tab
+   Name = "Button Example",    add some text to the button
+   Callback = function()
+Paste the code here
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+thats most of it refer to 1fos and locus lols videos for more imformation
